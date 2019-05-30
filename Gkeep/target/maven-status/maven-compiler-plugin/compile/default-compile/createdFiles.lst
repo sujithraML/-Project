@@ -1,0 +1,12 @@
+com\aspire\dao\FileIO.class
+com\aspire\service\NoteService.class
+com\aspire\sample\whole\Response.class
+com\aspire\modelbeans\User.class
+com\aspire\sample\simpleuser\UserInfo.class
+com\aspire\sample\simpleuser\UserInfoService.class
+com\aspire\sample\whole\Person.class
+com\aspire\utility\DateComp.class
+com\aspire\sample\whole\PersonServiceImpl.class
+com\aspire\service\NoteServiceImpl.class
+com\aspire\sample\whole\PersonService.class
+com\aspire\modelbeans\Note.class
