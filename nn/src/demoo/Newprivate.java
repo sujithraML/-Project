@@ -1,0 +1,5 @@
+package demoo;
+
+ class Newprivate {
+
+}
