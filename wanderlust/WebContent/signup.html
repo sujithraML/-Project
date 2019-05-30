@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+			<title>New User</title>
+			
+	</head>
+	<body>
+		<form name="form" method="post" onsubmit="return validation()" action="Registration" >
+			Name:<br>
+			<input type="text" name="name" pattern="[A-Za-z]{3,}" title="three or more characters">
+			<br>
+			User Name:<br>
+			<input type="text" name="username">
+			<br>
+			Email Id:<br>
+			<input type="email" name="email">
+			<br>
+			Password:<br>
+			<input type="password" name="password" pattern="[A-Za-z]{8,}" title="Eight or more characters">
+			<br>
+			Re-enter Password:<br>
+			<input type="password" name="passwordduplicate" pattern="[A-Za-z]{8,}" title="Eight or more characters">
+			<br>
+			<input type="submit" value="register">
+			
+		</form>
+			<script type="text/javascript">
+				
+				function validation(){
+				var nameParam = document.form.name.value;
+				var usernameParam=document.form.username.value;
+				var emailParam=document.form.email.value;
+				var passwordParam=document.form.password.value;
+				var passwordDeuplicateParam=document.form.passwordduplicate.value;
+					
+						if(nameParam == ""){
+							alert("Please Enter Your Name");
+							document.form.name.focus();
+							return false;
+						}else	if(usernameParam == ""){
+										alert("Please Enter Your User Name");
+										document.form.username.focus();
+										return false;
+						}else	if(emailParam == ""){
+										alert("Please Enter Your Email Id");
+										document.form.email.focus();
+										return false;
+						}else	if(nameParam == ""){
+										alert("Please Enter Your Name");
+										document.form.name.focus();
+										return false;
+						}else	if(passwordParam == ""){
+										alert("Please Enter Your Password");
+										document.form.password.focus();
+										return false;
+						}else	if(passwordParam == usernameParam) {
+							        alert("Error: Password must be different from Username!");
+							        form.password.focus();
+							        return false;
+ 						 }else	if(passwordDeuplicateParam == ""){
+										alert("Please Enter Your Password again");
+										document.form.password.focus();
+										return false;
+						} else	if( passwordParam != passwordDeuplicateParam){
+								 		alert("Error:Password does not match");
+								 		form.password.focus();
+								 		return false;
+						}
+						
+				}
+	</script>
+	</body>
+	
+</html>

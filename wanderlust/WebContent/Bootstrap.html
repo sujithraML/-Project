@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+			<title>New User</title>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>		
+	</head>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<body>
+<style>
+.stylish-form 
+    {
+      background-image:url('https://images.pexels.com/photos/721169/pexels-photo-721169.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); 
+      padding:10px;
+    }
+    .stylish-form h2 {
+      color:#f96332;
+      margin-top:50px;
+      
+    }
+    .font_white {
+      color:#fff !important;
+    }
+    .mar20 
+    {
+      margin:20px;
+    }
+    .inner-section {
+      background-color:#9C33FF;
+      width:350px;
+      display:block;
+      margin:0 auto;
+    }
+    .inside-form{
+      border-radius:8px;
+      padding-top:30px;
+      padding-bottom:30px;
+    }
+    .inside-form h2 {
+      font-weight:700;
+    }
+    .inside-form ul {
+      list-style-type:none;
+      text-align:center;
+      margin-top:30px;
+    }
+    .inside-form ul >li {
+      display:inline-block;
+    }
+    .inside-form ul >li > i {
+      margin-top:18px;
+    }
+    .icon-holder {
+      background: #fff;
+      border-radius: 50%;
+      vertical-align: middle;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      margin-right: 20px;
+    }
+
+    .dsp-flex {
+      display: -webkit-flex; 
+      align-items: center;
+      -webkit-align-items: center;
+      justify-content: center
+    }
+    .input-group, .form-group {
+      margin-bottom: 10px;
+    }
+    .input-group-addon {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #FFFFFF;
+      border-radius:25px;
+    }
+    .form-control,.form-control:focus,.form-control:hover
+    {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+      border-radius:25px;
+      border:none;
+      font-size:14px;
+    }
+    ::-webkit-input-placeholder { 
+      color: #fff !important;
+    }
+
+    .footer {
+      margin-top:40px;
+      margin-bottom:40px;
+    }
+    input::placeholder {
+      color: #fff !important;
+    }
+    .btn-lg {
+      font-size: 1em;
+      border-radius: 0.25rem;
+      padding: 15px 48px;
+    }
+    .btn-round {
+      border-width: 1px;
+      border-radius: 30px !important;
+      padding: 11px 23px;
+    }
+    .btn-neutral,.btn-neutral:focus,.btn-neutral:hover {
+      background-color: #FFFFFF;
+      color: #f96332;
+    }
+</style>
+<script src="https://use.fontawesome.com/1dec14be15.js"></script>
+    <div class="container-fluid stylish-form">
+      <div class="row mar20" >
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="inner-section">
+            <form name="form" method="post" action="RegistrationBS">
+              <div class="mar20 inside-form">
+               <ul class="tab-group">
+        		<li class="tab active">Sign Up</li>
+        		<li class="tab">Log In</li>
+      		   </ul>
+                <h2 class="font_white text-center">Join Us</h2>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                  <input id="name" name="name" type="text" class="form-control"  pattern="[A-Za-z]{3,}" title="three or more characters" placeholder="First Name" required autocomplete="off">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                  <input id="username" name="username" type="text" class="form-control" pattern="{3,}" title="three or more characters" placeholder="User Name" required autocomplete="off">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                  <input id="email" name="email" type="email" class="form-control" placeholder="Your Email"pattern="{8,}" title="three or more characters" required autocomplete="off">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                  <input id="password" name="password" type="password" class="form-control"  pattern="{8,}" title="Eight or more characters" placeholder="Set a Password" required autocomplete="off">
+                </div>
+                 <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                  <input id="passwordduplicate" name="passwordduplicate" type="password" class="form-control"  pattern="{8,}" title="Eight or more characters" placeholder="Re-enter Password" required autocomplete="off">
+                </div>
+                 <div class="footer text-center">
+                  <input type="submit" value="Get Connected"class="btn btn-neutral btn-round btn-lg">
+                 </div>
+              </div><!-- mar20 inside-form -->
+            </form>
+          </div><!-- inner-section -->
+        </div><!-- col-md-12 col-sm-12 col-xs-12 -->
+      </div><!--row mar20-->
+    </div><!--container-fluid stylish-form-->
+   </body>
+	
+</html>

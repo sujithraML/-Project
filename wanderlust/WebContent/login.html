@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>login</title>
+</head>
+<body>
+<form  name=form method="post" action="LoginServlet" onsubmit="return validation()">
+LoginId:<br><input type="text" name="username">
+<br>
+Password:<br><input type="password" name="password" pattern="[A-Za-z]{8,}" title="Eight or more characters">
+<br>
+<input type="submit" value="Submit">
+</form>
+			<script type="text/javascript">
+				
+				function validation(){
+				var usernameParam=document.form.username.value;
+				var passwordParam=document.form.password.value;
+					
+					if(usernameParam == ""){
+						alert("Please Enter Your User Name");
+						document.form.username.focus();
+						return false;
+					}else	if(passwordParam == ""){
+						alert("Please Enter Your Password");
+						document.form.password.focus();
+						return false;
+					}else	if(passwordParam == usernameParam) {
+							        alert("Error: Password must be different from Username!");
+							        form.password.focus();
+							        return false;
+ 					}	
+				}
+	</script>
+</body>
+</html>
