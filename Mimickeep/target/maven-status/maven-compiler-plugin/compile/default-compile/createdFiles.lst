@@ -5,6 +5,7 @@ com\aspire\gkeep\componentcheck\Logic.class
 com\aspire\gkeep\mapper\NotesRowMapper.class
 com\aspire\gkeep\dao\UserDAO.class
 com\aspire\gkeep\ApplicationConfiguration.class
+com\aspire\gkeep\uncertain\DateComparator.class
 com\aspire\gkeep\dao\ReminderDAOImplFiles.class
 com\aspire\gkeep\services\EmailService.class
 com\aspire\gkeep\exceptions\UserNotFoundException.class
@@ -38,7 +39,6 @@ com\aspire\gkeep\services\RegistrationServiceImpl.class
 com\aspire\gkeep\dao\ReminderDAO.class
 com\aspire\gkeep\mapper\NoteRowMapper.class
 com\aspire\gkeep\dao\NoteDAOImplFiles.class
-com\aspire\gkeep\DateComparator.class
 com\aspire\gkeep\services\AbstractRegistrationService.class
 com\aspire\gkeep\services\NoteServiceImplJdbc.class
 com\aspire\gkeep\models\Reminder.class

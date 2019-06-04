@@ -1,5 +1,6 @@
 package com.aspire.gkeep.models;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -21,8 +22,13 @@ import com.aspire.gkeep.utils.Type;
 		@UniqueConstraint(columnNames = "timeStamp")
 })
 @Component
-public class Note{
+public class Note implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5052323089220974874L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id", unique = true, nullable = false)

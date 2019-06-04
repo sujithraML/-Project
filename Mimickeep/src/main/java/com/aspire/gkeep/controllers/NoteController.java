@@ -128,7 +128,7 @@ public class NoteController {
 	/* pins the specified note to the top of the list */
 	@PatchMapping(value = Paths.NOTESPINPATH)
 	public void pinNote(@RequestParam(value = "user") String user, @RequestBody Note note)
-			throws CustomIOException, UserNotFoundException, GenericException, EmptyValueException {
+			throws CustomIOException, UserNotFoundException, GenericException, EmptyValueException, UserNameUnAvailableException {
 		noteService.pinNote(user, note);
 	}
 
@@ -143,7 +143,7 @@ public class NoteController {
 
 	@PutMapping(value = Paths.NOTESUNPINPATH)
 	public void unPinNote(@RequestParam(value = "user") String user, @RequestBody Note note)
-			throws UserNotFoundException, CustomIOException, GenericException, EmptyValueException {
+			throws UserNotFoundException, CustomIOException, GenericException, EmptyValueException, UserNameUnAvailableException {
 		noteService.unPinNote(user, note);
 	}
 

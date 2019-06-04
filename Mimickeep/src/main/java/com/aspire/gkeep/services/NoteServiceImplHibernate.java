@@ -29,8 +29,7 @@ public class NoteServiceImplHibernate implements NoteService{
 	
 	@Override
 	public List<Note> getNotes(String userName) throws UserNotFoundException, GenericException, EmptyValueException {
-		// TODO Auto-generated method stub
-		return null;
+		return noteDAO.getNotes(userName);
 	}
 
 	@Override

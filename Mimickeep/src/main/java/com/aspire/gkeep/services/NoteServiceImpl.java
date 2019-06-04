@@ -10,13 +10,14 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.aspire.gkeep.DateComparator;
+import com.aspire.gkeep.uncertain.DateComparator;
 import com.aspire.gkeep.dao.NoteDAO;
 import com.aspire.gkeep.dao.ReminderDAOImplFiles;
 import com.aspire.gkeep.dao.UserDAO;
 import com.aspire.gkeep.exceptions.CustomIOException;
 import com.aspire.gkeep.exceptions.EmptyValueException;
 import com.aspire.gkeep.exceptions.GenericException;
+import com.aspire.gkeep.exceptions.UserNameUnAvailableException;
 import com.aspire.gkeep.exceptions.UserNotFoundException;
 import com.aspire.gkeep.models.Media;
 import com.aspire.gkeep.models.Note;
@@ -138,7 +139,7 @@ public class NoteServiceImpl implements NoteService {
 	/* pins the specified note to the top of the list */
 
 	@Override
-	public void pinNote(String user, Note note) throws CustomIOException, UserNotFoundException, GenericException, EmptyValueException {
+	public void pinNote(String user, Note note) throws CustomIOException, UserNotFoundException, GenericException, EmptyValueException, UserNameUnAvailableException {
 		try {
 			if (userDAO.searchUserName(user)) {
 				pinned = new ArrayList<Note>();
@@ -161,7 +162,7 @@ public class NoteServiceImpl implements NoteService {
 
 	/* removes pin and adds it into */
 	@Override
-	public String unPinNote(String user, Note note) throws UserNotFoundException, CustomIOException, GenericException, EmptyValueException {
+	public String unPinNote(String user, Note note) throws UserNotFoundException, CustomIOException, GenericException, EmptyValueException, UserNameUnAvailableException {
 		String status = "";
 		if(userDAO.searchUserName(user)) {
 			pinned = new ArrayList<Note>();

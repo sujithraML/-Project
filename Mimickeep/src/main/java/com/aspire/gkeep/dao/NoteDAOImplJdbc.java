@@ -47,15 +47,13 @@ public class NoteDAOImplJdbc implements NoteDAO {
 	}
 
 	@Override
-	public String savePinnedNotes(List<Note> pinned, String user) throws GenericException {
+	public void savePinnedNotes(List<Note> pinned, String user) throws GenericException {
 
-		return null;
 	}
 
 	@Override
-	public String unpinNotes(Note note, String user) throws UserNotFoundException, GenericException {
+	public void unpinNotes(Note note, String user) throws UserNotFoundException, GenericException {
 
-		return null;
 	}
 
 	@Override

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.support.TransactionTemplate;
 
-import com.aspire.gkeep.DateComparator;
+import com.aspire.gkeep.uncertain.DateComparator;
 import com.aspire.gkeep.dao.NoteDAO;
 import com.aspire.gkeep.dao.UserDAO;
 import com.aspire.gkeep.exceptions.CustomIOException;

@@ -5,6 +5,7 @@ import java.util.List;
 import com.aspire.gkeep.exceptions.CustomIOException;
 import com.aspire.gkeep.exceptions.EmptyValueException;
 import com.aspire.gkeep.exceptions.GenericException;
+import com.aspire.gkeep.exceptions.UserNameUnAvailableException;
 import com.aspire.gkeep.exceptions.UserNotFoundException;
 import com.aspire.gkeep.models.Media;
 import com.aspire.gkeep.models.Note;
@@ -24,9 +25,9 @@ public interface NoteService {
 	
 	public void addLabel(String user, String timeStamp,String label) throws CustomIOException, UserNotFoundException, GenericException, EmptyValueException;
 	
-	public void pinNote(String user, Note note) throws CustomIOException, UserNotFoundException, GenericException, EmptyValueException;
+	public void pinNote(String user, Note note) throws CustomIOException, UserNotFoundException, GenericException, EmptyValueException, UserNameUnAvailableException;
 	
-	public String unPinNote(String user, Note note) throws UserNotFoundException, CustomIOException, GenericException, EmptyValueException;
+	public String unPinNote(String user, Note note) throws UserNotFoundException, CustomIOException, GenericException, EmptyValueException, UserNameUnAvailableException;
 	
 	public String restoreFromTrash(String user, Note note) throws UserNotFoundException, CustomIOException, GenericException, EmptyValueException;
 	

@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
 
 import com.aspire.gkeep.exceptions.CustomIOException;
 import com.aspire.gkeep.exceptions.GenericException;
+import com.aspire.gkeep.exceptions.UserNameUnAvailableException;
 import com.aspire.gkeep.exceptions.UserNotFoundException;
 import com.aspire.gkeep.models.Note;
 import com.aspire.gkeep.utils.Constants;
@@ -108,9 +109,8 @@ public class NoteDAOImplFiles implements NoteDAO {
 	}
 
 	@Override
-	public String savePinnedNotes(List<Note> pinned, String user) throws GenericException {
+	public void savePinnedNotes(List<Note> pinned, String user) throws GenericException, UserNameUnAvailableException {
 		File file = new File(Constants.DIRECTORY + user + "/" + Constants.PINNED);
-		String status = "";
 		if (isFileExists(user)) {
 			try {
 				FileWriter fileWriter = new FileWriter(file);
@@ -124,7 +124,6 @@ public class NoteDAOImplFiles implements NoteDAO {
 				}
 				fileWriter.flush();
 				fileWriter.close();
-				status = Constants.PINNED;
 
 			} catch (IOException e) {
 				throw new GenericException(ErrorCodes.ERRORCODE, e);
@@ -132,8 +131,7 @@ public class NoteDAOImplFiles implements NoteDAO {
 				throw new GenericException(ErrorCodes.ERRORCODE, e);
 			}
 		} else
-			status = ErrorCodes.USERUNAVAILABLEERROR;
-		return status;
+			throw new UserNameUnAvailableException(ErrorCodes.USERNAMEUNAVAILABLEEXCEPTION);
 	}
 
 	@Override
@@ -219,10 +217,9 @@ public class NoteDAOImplFiles implements NoteDAO {
 	}
 
 	@Override
-	public String unpinNotes(Note note, String user) throws UserNotFoundException, GenericException {
+	public void unpinNotes(Note note, String user) throws UserNotFoundException, GenericException {
 		File file = new File(Constants.DIRECTORY + user + "/" + Constants.PINNED);
 		pinned = new ArrayList<Note>();
-		String status = "";
 		if (isFileExists(user)) {
 			try {
 				FileWriter fileWriter = new FileWriter(file);
@@ -237,7 +234,6 @@ public class NoteDAOImplFiles implements NoteDAO {
 				}
 				fileWriter.flush();
 				fileWriter.close();
-				status = Constants.PINNED;
 
 			} catch (IOException e) {
 				throw new GenericException(ErrorCodes.IOEXCEPTION, e);
@@ -246,7 +242,6 @@ public class NoteDAOImplFiles implements NoteDAO {
 			}
 		} else
 			throw new UserNotFoundException(ErrorCodes.USERNOTFOUNDEXCEPTION);
-		return status;
 	}
 
 	@Override
