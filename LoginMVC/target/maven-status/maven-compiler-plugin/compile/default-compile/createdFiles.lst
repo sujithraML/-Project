@@ -1,0 +1,11 @@
+com\aspire\simplemvc\dao\UserDaoImpl.class
+com\aspire\simplemvc\services\UserService.class
+com\aspire\simplemvc\services\UserServiceImpl.class
+com\aspire\vishal\Vishal.class
+com\aspire\simplemvc\controllers\RegistrationController.class
+com\aspire\simplemvc\dao\UserDao.class
+com\aspire\simplemvc\Dummy.class
+com\aspire\simplemvc\models\Login.class
+com\aspire\simplemvc\controllers\LoginController.class
+com\aspire\simplemvc\models\User.class
+com\aspire\simplemvc\dao\UserMapper.class
